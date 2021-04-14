@@ -23,10 +23,11 @@ namespace StudentIncidents1.Pages.StudentIncidents
 
         public async Task OnGetAsync()
         {
-            StudentIncident = await _context.StudentIncident
+            /*StudentIncident = await _context.StudentIncident
                 .Include(s => s.Incident)
                 .Include(s => s.Student)
                 .ToListAsync();
+            */
 
             StudentIncident = (IList<StudentIncident>)await _context.StudentIncident
                 .GroupBy(o => new

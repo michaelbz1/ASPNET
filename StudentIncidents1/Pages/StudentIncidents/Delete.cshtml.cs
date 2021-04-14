@@ -31,7 +31,7 @@ namespace StudentIncidents1.Pages.StudentIncidents
 
             StudentIncident = await _context.StudentIncident
                 .Include(s => s.Incident)
-                .Include(s => s.Student).FirstOrDefaultAsync(m => m.StudentId == id);
+                .Include(s => s.Student).FirstOrDefaultAsync(m => m.ID == id);
 
             if (StudentIncident == null)
             {

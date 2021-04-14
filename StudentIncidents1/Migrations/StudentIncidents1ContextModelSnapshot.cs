@@ -63,21 +63,25 @@ namespace StudentIncidents1.Migrations
 
             modelBuilder.Entity("StudentIncidents1.Models.StudentIncident", b =>
                 {
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IncidentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("ID")
-                        .HasColumnType("int");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("IncidentDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("StudentId", "IncidentId");
+                    b.Property<int>("IncidentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
 
                     b.HasIndex("IncidentId");
+
+                    b.HasIndex("StudentId");
 
                     b.ToTable("StudentIncident");
                 });

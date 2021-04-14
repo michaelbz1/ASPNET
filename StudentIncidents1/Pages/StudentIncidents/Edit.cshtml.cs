@@ -32,7 +32,7 @@ namespace StudentIncidents1.Pages.StudentIncidents
 
             StudentIncident = await _context.StudentIncident
                 .Include(s => s.Incident)
-                .Include(s => s.Student).FirstOrDefaultAsync(m => m.StudentId == id);
+                .Include(s => s.Student).FirstOrDefaultAsync(m => m.ID == id);
 
             if (StudentIncident == null)
             {
@@ -60,7 +60,7 @@ namespace StudentIncidents1.Pages.StudentIncidents
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentIncidentExists(StudentIncident.StudentId))
+                if (!StudentIncidentExists(StudentIncident.ID))
                 {
                     return NotFound();
                 }
@@ -75,7 +75,7 @@ namespace StudentIncidents1.Pages.StudentIncidents
 
         private bool StudentIncidentExists(int id)
         {
-            return _context.StudentIncident.Any(e => e.StudentId == id);
+            return _context.StudentIncident.Any(e => e.ID == id);
         }
     }
 }
