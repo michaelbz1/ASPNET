@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "P:\\ASPNET\\StudentIncidents\\StudentIncidents.csproj": {}
+    "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents\\StudentIncidents.csproj": {}
   },
   "projects": {
-    "P:\\ASPNET\\StudentIncidents\\StudentIncidents.csproj": {
+    "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents\\StudentIncidents.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\ASPNET\\StudentIncidents\\StudentIncidents.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents\\StudentIncidents.csproj",
         "projectName": "StudentIncidents",
-        "projectPath": "P:\\ASPNET\\StudentIncidents\\StudentIncidents.csproj",
-        "packagesPath": "C:\\Users\\mbuziewicz\\.nuget\\packages\\",
-        "outputPath": "P:\\ASPNET\\StudentIncidents\\obj\\",
+        "projectPath": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents\\StudentIncidents.csproj",
+        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mbuziewicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,7 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -53,19 +56,13 @@
               "target": "Package",
               "version": "[3.1.7, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[3.1.13, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.1.13, )"
+              "version": "[5.0.5, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -82,6 +79,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.14, 3.1.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -90,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -30,7 +30,7 @@ namespace StudentIncidents.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FirstOrDefaultAsync(m => m.StudentID == id);
 
             if (Student == null)
             {
@@ -56,7 +56,7 @@ namespace StudentIncidents.Pages.Students
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(Student.ID))
+                if (!StudentExists(Student.StudentID))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace StudentIncidents.Pages.Students
 
         private bool StudentExists(int id)
         {
-            return _context.Student.Any(e => e.ID == id);
+            return _context.Student.Any(e => e.StudentID == id);
         }
     }
 }

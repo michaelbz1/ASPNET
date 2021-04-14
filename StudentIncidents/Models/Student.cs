@@ -8,7 +8,15 @@ namespace StudentIncidents.Models
 {
     public class Student
     {
-        public int ID { get; set; }
+
+     
+        public Student()
+        {
+            this.Incidents = new HashSet<Incident>();
+        }
+
+        [Key]
+        public int StudentID { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
@@ -18,8 +26,8 @@ namespace StudentIncidents.Models
         public string StudentLastName { get; set; }
         public string StudentPhone { get; set; }
         public string StudentEmail { get; set; }
-        public ICollection<Parent> Parents { get; set; }
-        public ICollection<Incident> Incidents { get; set; }
+
+        public virtual ICollection<Incident> Incidents { get; set; }
 
 
     }

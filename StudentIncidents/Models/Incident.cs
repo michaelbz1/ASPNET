@@ -8,7 +8,9 @@ namespace StudentIncidents.Models
 {
     public class Incident
     {
-        public int ID { get; set; }
+
+        [Key]
+        public int IncidentID { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -18,6 +20,7 @@ namespace StudentIncidents.Models
 
         [Required]
         public string IncidentName { get; set; }
+
 
     }
 }

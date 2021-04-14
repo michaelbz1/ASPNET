@@ -14,17 +14,6 @@ namespace StudentIncidents.Data
         {
         }
 
-        public DbSet<StudentIncidents.Models.Incident> Incident { get; set; }
-
-        public DbSet<StudentIncidents.Models.Parent> Parent { get; set; }
-
         public DbSet<StudentIncidents.Models.Student> Student { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Student>().ToTable(nameof(Student))
-                .HasMany(c => c.Incidents);
-        }
-
     }
 }

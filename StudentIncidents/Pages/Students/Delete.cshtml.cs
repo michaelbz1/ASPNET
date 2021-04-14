@@ -29,7 +29,7 @@ namespace StudentIncidents.Pages.Students
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            Student = await _context.Student.FirstOrDefaultAsync(m => m.StudentID == id);
 
             if (Student == null)
             {
