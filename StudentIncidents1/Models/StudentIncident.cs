@@ -9,9 +9,7 @@ namespace StudentIncidents1.Models
 {
     public class StudentIncident
     {
-        [Key]
         public int ID { get; set; }
-
         public int StudentId { get; set; }
         public Student Student { get; set; }
 
@@ -19,9 +17,8 @@ namespace StudentIncidents1.Models
         public Incident Incident { get; set; }
 
         [Required]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Display(Name = "Incident Date")]
         public DateTime IncidentDate { get; set; }
+
     }
 }

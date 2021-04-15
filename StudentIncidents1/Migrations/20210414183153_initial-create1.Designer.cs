@@ -10,8 +10,8 @@ using StudentIncidents1.Data;
 namespace StudentIncidents1.Migrations
 {
     [DbContext(typeof(StudentIncidents1Context))]
-    [Migration("20210414031612_initial-create")]
-    partial class initialcreate
+    [Migration("20210414183153_initial-create1")]
+    partial class initialcreate1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -28,19 +28,11 @@ namespace StudentIncidents1.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime>("IncidentDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("IncidentName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("StudentID")
-                        .HasColumnType("int");
-
                     b.HasKey("IncidentID");
-
-                    b.HasIndex("StudentID");
 
                     b.ToTable("Incident");
                 });
@@ -71,11 +63,44 @@ namespace StudentIncidents1.Migrations
                     b.ToTable("Student");
                 });
 
-            modelBuilder.Entity("StudentIncidents.Models.Incident", b =>
+            modelBuilder.Entity("StudentIncidents1.Models.StudentIncident", b =>
                 {
-                    b.HasOne("StudentIncidents.Models.Student", null)
-                        .WithMany("Incidents")
-                        .HasForeignKey("StudentID");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("IncidentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IncidentId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("IncidentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("StudentIncident");
+                });
+
+            modelBuilder.Entity("StudentIncidents1.Models.StudentIncident", b =>
+                {
+                    b.HasOne("StudentIncidents.Models.Incident", "Incident")
+                        .WithMany("StudentIncidents")
+                        .HasForeignKey("IncidentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StudentIncidents.Models.Student", "Student")
+                        .WithMany("StudentIncidents")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

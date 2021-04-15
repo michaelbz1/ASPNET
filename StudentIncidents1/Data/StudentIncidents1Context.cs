@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using StudentIncidents.Models;
+using StudentIncidents1.Models;
 
 namespace StudentIncidents1.Data
 {
@@ -14,15 +14,10 @@ namespace StudentIncidents1.Data
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Models.StudentIncident>().HasKey(sc => new { sc.StudentId, sc.IncidentId });
-        }
-        public DbSet<Student> Student { get; set; }
+        public DbSet<StudentIncidents1.Models.StudentIncident> StudentIncident { get; set; }
 
-        public DbSet<Incident> Incident { get; set; }
-        public DbSet<Models.StudentIncident> StudentIncident { get; set; }
+        public DbSet<StudentIncidents.Models.Incident> Incident { get; set; }
 
-
+        public DbSet<StudentIncidents.Models.Student> Student { get; set; }
     }
 }

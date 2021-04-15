@@ -36,6 +36,7 @@ namespace StudentIncidents1
 
             services.AddDbContext<StudentIncidents1Context>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("StudentIncidents1Context")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

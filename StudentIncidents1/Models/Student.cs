@@ -18,7 +18,9 @@ namespace StudentIncidents.Models
         [Required]
         [Display(Name = "Last Name")]
         public string StudentLastName { get; set; }
+        [DataType(DataType.PhoneNumber)]
         public string StudentPhone { get; set; }
+        [DataType(DataType.EmailAddress)]
         public string StudentEmail { get; set; }
 
         public IList<StudentIncident> StudentIncidents { get; set; }
