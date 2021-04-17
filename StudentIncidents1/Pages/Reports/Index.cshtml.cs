@@ -20,24 +20,18 @@ namespace StudentIncidents1.Pages.StudentIncidents
         }
 
         public IList<StudentIncident> StudentIncident { get; set; }
+        public int StudentTotal;
 
         public async Task OnGetAsync()
         {
-            /*StudentIncident = await _context.StudentIncident
+            StudentIncident = await _context.StudentIncident
                 .Include(s => s.Incident)
                 .Include(s => s.Student)
+                .OrderBy(i => i.Student.StudentLastName)
+                .OrderBy(p => p.Student.StudentFirstName)
+                .OrderByDescending(q => q.IncidentDate)
+                .OrderBy(r => r.Incident.IncidentName)
                 .ToListAsync();
-            */
-
-            StudentIncident = (IList<StudentIncident>)await _context.StudentIncident
-                .GroupBy(o => new
-                {
-                    o.Student.StudentID,
-                    o.Incident.IncidentName,
-                })
-                .Select(g => new { StudentTotal = g.Count() })
-                .ToListAsync();
-
 
         }
     }

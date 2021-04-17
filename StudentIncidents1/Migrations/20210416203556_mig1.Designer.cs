@@ -10,8 +10,8 @@ using StudentIncidents1.Data;
 namespace StudentIncidents1.Migrations
 {
     [DbContext(typeof(StudentIncidents1Context))]
-    [Migration("20210414183153_initial-create1")]
-    partial class initialcreate1
+    [Migration("20210416203556_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

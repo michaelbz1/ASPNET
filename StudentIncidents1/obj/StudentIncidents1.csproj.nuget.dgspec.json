@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "P:\\ASPNET_github_michaelbz1\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj": {}
+    "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj": {}
   },
   "projects": {
-    "P:\\ASPNET_github_michaelbz1\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj": {
+    "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\ASPNET_github_michaelbz1\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj",
+        "projectUniqueName": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj",
         "projectName": "StudentIncidents1",
-        "projectPath": "P:\\ASPNET_github_michaelbz1\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj",
-        "packagesPath": "C:\\Users\\mbuziewicz\\.nuget\\packages\\",
-        "outputPath": "P:\\ASPNET_github_michaelbz1\\ASPNET\\StudentIncidents1\\obj\\",
+        "projectPath": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents1\\StudentIncidents1.csproj",
+        "packagesPath": "C:\\Users\\micha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\micha\\OneDrive\\Documents2\\git_michaelbz1_ASPNET\\ASPNET\\StudentIncidents1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\mbuziewicz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\micha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -40,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -80,6 +79,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.14, 3.1.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -88,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
