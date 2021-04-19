@@ -20,5 +20,6 @@ namespace StudentIncidents1.Models
         [Display(Name = "Incident Date")]
         public DateTime IncidentDate { get; set; }
 
+        public string Comment { get; set; }
     }
 }
