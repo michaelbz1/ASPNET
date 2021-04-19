@@ -1,0 +1,54 @@
+﻿@page
+@model StudentIncidents1.Pages.StudentIncidents.Report2IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentIncident[0].Student)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentIncident[0].Incident)
+            </th>
+            <th>
+            <th scope="row">Total:</th>
+            <td>@Html.DisplayFor(m => m.Equals (u => u.Student))</td>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.GroupBy(u => u.Name, (key, items) => new { Name = key, Cost = items.Sum(u => u.Cost) }))
+        {
+            <tr>
+                <th scope="row">@Html.DisplayFor(_ => item.Name)</th>
+                <th scope="row">@Html.DisplayFor(_ => item.Cost)</th>
+            </tr>
+        }
+
+        @foreach (var item in Model.StudentIncident)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.StudentFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Incident.IncidentName)
+                </td>
+                <td>
+                <th scope="row">Total:</th>
+                <td>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

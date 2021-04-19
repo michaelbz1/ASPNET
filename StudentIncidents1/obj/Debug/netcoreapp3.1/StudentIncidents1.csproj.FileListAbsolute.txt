@@ -201,3 +201,4 @@ P:\ASPNET_github_michaelbz1\ASPNET\StudentIncidents1\obj\Debug\netcoreapp3.1\Raz
 P:\ASPNET_github_michaelbz1\ASPNET\StudentIncidents1\obj\Debug\netcoreapp3.1\Razor\Pages\StudentIncidents\Edit.cshtml.g.cs
 P:\ASPNET_github_michaelbz1\ASPNET\StudentIncidents1\obj\Debug\netcoreapp3.1\Razor\Pages\StudentIncidents\Index.cshtml.g.cs
 P:\ASPNET_github_michaelbz1\ASPNET\StudentIncidents1\obj\Debug\netcoreapp3.1\Razor\Pages\Reports\Index.cshtml.g.cs
+P:\ASPNET_github_michaelbz1\ASPNET\StudentIncidents1\obj\Debug\netcoreapp3.1\Razor\Pages\Reports\Report2.cshtml.g.cs
